@@ -7,7 +7,7 @@ ENV MYSQL_DATABASE adventureworks
 ENV MYSQL_USER Tekapp
 ENV MYSQL_PASSWORD Tekapp!
 
-RUN apt-get update && apt-get -y install vim
+RUN apt-get update && apt-get -y install vim && apt-get install iputils-ping
 
 EXPOSE 3306
 

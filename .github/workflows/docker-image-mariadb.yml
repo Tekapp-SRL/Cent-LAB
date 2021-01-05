@@ -14,5 +14,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: docker login
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
     - name: Build the Docker image
-      run: ls && docker build . --file bin/mariadb/mariadb.Dockerfile --tag cent-lab_mariadb:$(date +%s)
+      run: docker build . --file bin/mariadb/mariadb.Dockerfile --tag cent-lab_mariadb:$(date +%s)
+
+    - name: Docker Push
+      run: docker push tekappsrl/cent_lab-mariadb

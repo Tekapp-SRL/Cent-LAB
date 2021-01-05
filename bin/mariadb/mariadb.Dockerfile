@@ -1,6 +1,6 @@
 FROM mariadb:10.3
 
-ADD bin/sql/ /docker-entrypoint-initdb.d
+ADD bin/mariadb/sql/ /docker-entrypoint-initdb.d
 
 ENV MYSQL_ROOT_PASSWORD Tekapp!
 ENV MYSQL_DATABASE adventureworks

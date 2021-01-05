@@ -24,4 +24,4 @@ jobs:
       run: docker build . --file bin/mariadb/mariadb.Dockerfile --tag cent-lab_mariadb:$(date +%s)
 
     - name: Docker Push
-      run: docker push tekappsrl/cent_lab-mariadb
+      run: docker push tekappsrl/cent_lab-mariadb 

@@ -33,14 +33,6 @@ jobs:
           file: bin/mariadb/mariadb.Dockerfile
           platforms: linux/amd64
           push: true
+          snapshot: true
           tags: tekappsrl/cent-lab_mariadb:latest
           
-      -
-        name: Build and push 
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: bin/mariadb/mariadb.Dockerfile
-          platforms: linux/amd64
-          push: true
-          tags: tekappsrl/cent-lab_mariadb:$(date +%s)

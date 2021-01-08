@@ -1,4 +1,4 @@
-FROM mariadb:latest
+FROM mariadb:10.4
 
 ADD bin/mariadb/sql/ /docker-entrypoint-initdb.d
 

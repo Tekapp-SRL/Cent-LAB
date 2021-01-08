@@ -1,4 +1,4 @@
-name: CI docker-image-mariadb
+name: CI docker-image-mariadb10.4
 
 on:
   push:
@@ -30,8 +30,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: bin/mariadb/mariadb.Dockerfile
+          file: bin/mariadb/mariadb_10_4.Dockerfile
           platforms: linux/amd64
           push: true
-          tags: tekappsrl/cent-lab_mariadb:latest
+          tags: tekappsrl/cent-lab_mariadb:10.4
           

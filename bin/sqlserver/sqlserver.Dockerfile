@@ -1,8 +1,7 @@
 # Adventure Works Database on SQL Server 2019
 FROM mcr.microsoft.com/mssql/server:2019-latest
 
-# Note: This isn't a secure password, and please don't use this for production.
-ENV SA_PASSWORD=Tekapp!
+ENV SA_PASSWORD=Tekapp2021!
 ENV ACCEPT_EULA=Y
 
 # Change to root user to run wget and move the file

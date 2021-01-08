@@ -1,5 +1,5 @@
 # Adventure Works Database on SQL Server 2019
-FROM mcr.microsoft.com/mssql/server:latest
+FROM mcr.microsoft.com/mssql/server:2017-latest
 
 ENV SA_PASSWORD=Tekapp2021!
 ENV ACCEPT_EULA=Y
